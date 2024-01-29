@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "demo-website",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -18,14 +11,14 @@
     "href": "eda.html",
     "title": "Penguins EDA",
     "section": "",
-    "text": "Code\nlibrary(palmerpenguins)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(ggplot2)\nlibrary(duckdb)\n\n\nLoading required package: DBI\n\n\nCode\nlibrary(DBI)\n\n# df &lt;- palmerpenguins::penguins\ncon &lt;- DBI::dbConnect(\n  duckdb::duckdb(), \n  dbdir = \"my-db.duckdb\"\n  )\ndf &lt;- dplyr::tbl(con, \"penguins\")\n\n\n\n\nCode\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n      which(sapply(df, is.numeric)), \n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  knitr::kable()\n\n\n`summarise()` has grouped output by \"species\". You can override using the\n`.groups` argument.\n\n\n\n\n\nspecies\nsex\n\n\n\n\nAdelie\nfemale\n\n\nGentoo\nNA\n\n\nChinstrap\nfemale\n\n\nGentoo\nmale\n\n\nChinstrap\nmale\n\n\nAdelie\nmale\n\n\nAdelie\nNA\n\n\nGentoo\nfemale"
+    "text": "Code\nlibrary(palmerpenguins)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(ggplot2)\nlibrary(duckdb)\n\n\nLoading required package: DBI\n\n\nCode\nlibrary(DBI)\n\n# df &lt;- palmerpenguins::penguins\ncon &lt;- DBI::dbConnect(\n  duckdb::duckdb(), \n  dbdir = \"my-db.duckdb\"\n  )\ndf &lt;- dplyr::tbl(con, \"penguins\")\n\n\n\n\nCode\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n      which(sapply(df, is.numeric)), \n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  knitr::kable()\n\n\n`summarise()` has grouped output by \"species\". You can override using the\n`.groups` argument.\n\n\n\n\n\nspecies\nsex\n\n\n\n\nChinstrap\nmale\n\n\nChinstrap\nfemale\n\n\nAdelie\nNA\n\n\nGentoo\nfemale\n\n\nGentoo\nmale\n\n\nAdelie\nfemale\n\n\nGentoo\nNA\n\n\nAdelie\nmale"
   },
   {
     "objectID": "eda.html#penguin-size-and-mass-by-sex-and-species",
     "href": "eda.html#penguin-size-and-mass-by-sex-and-species",
     "title": "Penguins EDA",
     "section": "",
-    "text": "Code\nlibrary(palmerpenguins)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(ggplot2)\nlibrary(duckdb)\n\n\nLoading required package: DBI\n\n\nCode\nlibrary(DBI)\n\n# df &lt;- palmerpenguins::penguins\ncon &lt;- DBI::dbConnect(\n  duckdb::duckdb(), \n  dbdir = \"my-db.duckdb\"\n  )\ndf &lt;- dplyr::tbl(con, \"penguins\")\n\n\n\n\nCode\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n      which(sapply(df, is.numeric)), \n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  knitr::kable()\n\n\n`summarise()` has grouped output by \"species\". You can override using the\n`.groups` argument.\n\n\n\n\n\nspecies\nsex\n\n\n\n\nAdelie\nfemale\n\n\nGentoo\nNA\n\n\nChinstrap\nfemale\n\n\nGentoo\nmale\n\n\nChinstrap\nmale\n\n\nAdelie\nmale\n\n\nAdelie\nNA\n\n\nGentoo\nfemale"
+    "text": "Code\nlibrary(palmerpenguins)\nlibrary(dplyr)\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nCode\nlibrary(ggplot2)\nlibrary(duckdb)\n\n\nLoading required package: DBI\n\n\nCode\nlibrary(DBI)\n\n# df &lt;- palmerpenguins::penguins\ncon &lt;- DBI::dbConnect(\n  duckdb::duckdb(), \n  dbdir = \"my-db.duckdb\"\n  )\ndf &lt;- dplyr::tbl(con, \"penguins\")\n\n\n\n\nCode\ndf %&gt;%\n  group_by(species, sex) %&gt;%\n  summarise(\n    across(\n      which(sapply(df, is.numeric)), \n      \\(x) mean(x, na.rm = TRUE)\n      )\n    ) %&gt;%\n  knitr::kable()\n\n\n`summarise()` has grouped output by \"species\". You can override using the\n`.groups` argument.\n\n\n\n\n\nspecies\nsex\n\n\n\n\nChinstrap\nmale\n\n\nChinstrap\nfemale\n\n\nAdelie\nNA\n\n\nGentoo\nfemale\n\n\nGentoo\nmale\n\n\nAdelie\nfemale\n\n\nGentoo\nNA\n\n\nAdelie\nmale"
   },
   {
     "objectID": "eda.html#penguin-size-vs-mass-by-species",
@@ -61,5 +54,12 @@
     "title": "Model",
     "section": "Get some information",
     "text": "Get some information\n\n\nCode\nprint(f\"R^2 {model.score(X,y)}\")\nprint(f\"Intercept {model.intercept_}\")\nprint(f\"Columns {X.columns}\")\nprint(f\"Coefficients {model.coef_}\")\n\n\nR^2 0.8555368759537614\nIntercept 2169.269720939399\nColumns Index(['bill_length_mm', 'species_Chinstrap', 'species_Gentoo', 'sex_male'], dtype='object')\nCoefficients [  32.53688677 -298.76553447 1094.86739145  547.36692408]\n\n\n\n\nCode\nv = VetiverModel(model, model_name='penguin_model', prototype_data=X)\n\nb = pins.board_folder('data/model', allow_pickle_read=True)\nv = VetiverModel.from_pin(b, 'penguin_model')\n\napp = VetiverAPI(v, check_prototype=True)\n# app.run(port = 8080)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "demo-website",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]
